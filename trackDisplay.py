@@ -61,10 +61,10 @@ for track in tracks_clusterindex:
 
 # plot all clusters
 fig = px.scatter_3d(x=cluster_x,y=cluster_y,z=cluster_z)
-fig.update_traces(marker=dict(size=0.5,color='black'))
+fig.update_traces(marker=dict(size=1,color='black'))
 
 # plot all tracks
 for i in range(len(tracks_clusterindex)):
-    fig.add_trace(go.Scatter3d(x=tracks_x[i],y=tracks_y[i],z=tracks_z[i],mode='lines',line=dict(color='red'),showlegend=False))
+    fig.add_trace(go.Scatter3d(x=tracks_x[i],y=tracks_y[i],z=tracks_z[i],mode='lines',line=dict(color='green'),showlegend=False))
 
 fig.show()
